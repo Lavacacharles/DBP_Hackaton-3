@@ -16,9 +16,11 @@ public class Student {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
-    private String lastName;
-    private String emal;
-    private String fullName;
+    private String email;      
+    private String code;    
+  
+    private String area;
+
     
 
 }

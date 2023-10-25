@@ -16,7 +16,7 @@ public class Profesor {
     private Long id;
     private String name;
     private String lastName;
-    private String emal;
+    private String email;
     private String fullName;
 
 }

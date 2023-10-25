@@ -25,37 +25,13 @@ public class Course {
 
     private Integer cycle;    
     
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.REMOVE)
     @JoinColumn(name = "courseType_id")
     private CourseType courseType;
 
     private String VRGroup;
 
-    public Course(String name, Integer credits, String courseContent, String code, String area, String hRGroup,
-            Integer cycle, String vRGroup) {
-        this.name = name;
-        this.credits = credits;
-        this.courseContent = courseContent;
-        this.code = code;
-        this.area = area;
-        HRGroup = hRGroup;
-        this.cycle = cycle;
-        VRGroup = vRGroup;
-    }
-
-    public Course(String name, Integer credits, String courseContent, String code, String area, String hRGroup,
-            Integer cycle, CourseType courseType, String vRGroup) {
-        this.name = name;
-        this.credits = credits;
-        this.courseContent = courseContent;
-        this.code = code;
-        this.area = area;
-        HRGroup = hRGroup;
-        this.cycle = cycle;
-        this.courseType = courseType;
-        VRGroup = vRGroup;
-    }
-
+   
     public Course() {
     }
 

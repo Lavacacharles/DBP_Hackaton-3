@@ -18,15 +18,15 @@ public class CourseAssessmentDetails {
     private String section;
     private String sectionGroup;
 
-    @OneToMany
+    @ManyToOne(cascade = CascadeType.REMOVE)
     @JoinColumn(name = "student_id")
     private Student student;
 
-    @OneToMany
+    @ManyToOne(cascade = CascadeType.REMOVE)
     @JoinColumn(name = "profesor_id")
     private Profesor profesor;
 
-    @OneToMany
+    @ManyToOne(cascade = CascadeType.REMOVE)
     @JoinColumn(name = "courseassessment_id")
     private CourseAssessment courseAssessment;
     

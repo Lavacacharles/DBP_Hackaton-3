@@ -12,18 +12,21 @@ public class CourseAssessment {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String tittle;
+    private String title;
     private String tipoNota;
     private String numNota;
     private String nomenclatura;
 
-    @OneToMany
+    @ManyToOne(cascade = CascadeType.REMOVE)
     @JoinColumn(name = "periodo_id")
     private Periodo periodo;
 
-    @OneToMany
+    @ManyToOne(cascade = CascadeType.REMOVE)
     @JoinColumn(name = "course_id")
-    private Course course;   
+    private Course course;
+
+    public CourseAssessment() {
+    }   
 
     
 }
