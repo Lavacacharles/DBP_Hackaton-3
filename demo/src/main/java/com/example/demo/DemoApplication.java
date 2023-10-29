@@ -21,7 +21,7 @@ import com.example.demo.infraestructure.ProfessorRepository;
 import com.example.demo.infraestructure.StudentRepository;
 
 @SpringBootApplication
-public class DemoApplication implements CommandLineRunner {
+public class DemoApplication /*implements CommandLineRunner*/ {
 
 	public static void main(String[] args) {
 		SpringApplication.run(DemoApplication.class, args);
@@ -48,7 +48,7 @@ public class DemoApplication implements CommandLineRunner {
 	@Autowired
 	private ProfessorRepository professorRepository ;
 
-	@Override
+	/*@Override
 	public void run(String... args) throws Exception {
 
 		//coursetype: 
@@ -111,6 +111,6 @@ public class DemoApplication implements CommandLineRunner {
 	
 
 		
-	}
+	}*/
 
 }

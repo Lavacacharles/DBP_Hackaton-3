@@ -25,7 +25,7 @@ public class Course {
 
     private Integer cycle;    
     
-    @ManyToOne(cascade = CascadeType.REMOVE)
+    @ManyToOne(cascade = {CascadeType.PERSIST, CascadeType.MERGE})
     @JoinColumn(name = "courseType_id")
     private CourseType courseType;
 
