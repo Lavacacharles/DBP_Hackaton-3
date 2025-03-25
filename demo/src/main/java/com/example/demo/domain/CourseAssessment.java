@@ -3,7 +3,7 @@ package com.example.demo.domain;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
-
+ 
 @Entity
 @Data
 @AllArgsConstructor(staticName = "build")
